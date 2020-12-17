@@ -56,6 +56,10 @@
     <div th:if="${buses != null and buses.size() > 0}">
       <script th:inline="javascript">
         /*<![CDATA[*/
+        var coords = {
+          lat: parseFloat(/*[[${location.lat}]]*/),
+      	  lng: parseFloat(/*[[${location.lng}]]*/)
+        };
         var busLocations = /*[[${buses}]]*/
         /*]]>*/
       </script>

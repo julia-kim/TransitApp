@@ -1,7 +1,7 @@
 var map
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: parseFloat(busLocations[0].LATITUDE), lng: parseFloat(busLocations[0].LONGITUDE) },
+    center: coords,
     zoom: 15,
     scrollwheel: false,
   })
@@ -26,10 +26,10 @@ function initMap() {
       infowindow.open(map, marker)
     })
   }
-  /*	let personMarker = new google.maps.Marker({
-		position: centerCoords,
-		map: map,
-		icon: person,
-		animation: google.maps.Animation.BOUNCE
-		});*/
+  let personMarker = new google.maps.Marker({
+    position: coords,
+    map: map,
+    icon: person,
+    animation: google.maps.Animation.DROP,
+  })
 }
